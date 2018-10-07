@@ -30,24 +30,33 @@ p {
 
 .header {
   display: flex;
-  height: 50px;
-  background-color: #07af8b;
-  font-size: 40px;
   justify-content: center;
   align-items: center;
+  height: 50px;
+  font-size: 40px;
+  background-color: #07af8b;
+}
+
+.main {
+  height: calc(100% - 40px);
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0 10px 17px 0 rgba(0,0,0,0.07);
 }
 
 .author-info {
   display: flex;
-  padding: 10px 30px;
   justify-content: space-between;
+  padding: 10px 30px;
   width: 100%;
 }
 
 .author-info .photo {
-  background-image: url("../images/photo.png");
-  min-width: 160px;
   height: 160px;
+  min-width: 160px;
+  background-image: url("../images/photo.png");
   background-size: contain;
   border-radius: 50%;
 }
@@ -74,10 +83,10 @@ p {
 }
 
 .author-info .social .list {
-  list-style-type: none;
-  word-break: break-word;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  word-break: break-word;
 }
 
 .author-info .social .linkedin::before {
@@ -110,38 +119,37 @@ p {
   position: relative;
 }
 
-.experience-article .left-bar::before {
+.experience-article .left-bar::before,
+.experience-article .left-bar::after {
   content: "";
+  position: absolute;
+  top: 3px;
+  border-radius: 50%;
   background: #e5e5e3;
+}
+
+.experience-article .left-bar::before {
+  left: -5px;
   width: 10px;
   height: 10px;
-  position: absolute;
-  left: -5px;
-  border-radius: 50%;
-  top: 3px;
+}
+
+.experience-article .left-bar::after {
+  left: -1px;
+  width: 1px;
+  height: 100%;
 }
 
 .experience-article .left-bar:last-child::after {
   display: none;
 }
 
-.experience-article .left-bar::after {
-  content: "";
-  background: #e5e5e3;
-  width: 1px;
-  height: 100%;
-  position: absolute;
-  left: -1px;
-  border-radius: 50%;
-  top: 3px;
-}
-
 .experience-article .experience-article-body .article-years,
 .experience-article .experience-article-body .article-description
 {
-  color: #a7a7a7;
   text-align: justify;
   font-size: 14px;
+  color: #a7a7a7;
 }
 
 .experience-article .experience-article-body .article-title {
@@ -157,9 +165,9 @@ p {
 }
 
 .experience-article-body .skills-list {
-  list-style-type: none;
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 .experience-article-body .skills-list .skill {
   display: flex;
@@ -168,19 +176,19 @@ p {
 }
 
 .experience-article-body .skills-list .skill .loading-bar {
+  position: relative;
   max-width: 200px;
   width: 100%;
-  border: 1px solid #07af8b;
   height: 20px;
   margin: 0 10px;
-  position: relative;
+  border: 1px solid #07af8b;
 }
 
 .experience-article-body .skills-list .skill .loading-bar::before {
   content: "";
+  position: absolute;
   height: 19px;
   background: #07af8b;
-  position: absolute;
 }
 
 .experience-article-body .skills-list .skill:nth-child(2n) .loading-bar::before {
@@ -198,28 +206,11 @@ p {
 }
 
 .footer {
-  height: 40px;
-  background-color: #059e7e;
   position: relative;
   bottom: 0;
   left: 0;
+  height: 40px;
   width: 100%;
   margin-top: 40px;
-}
-
-.main {
-  height: calc(100% - 40px);
-  max-width: 800px;
-  width: 100%;
-  margin: auto;
-  margin-top: 10px;
-  box-shadow: 0 10px 17px 0 rgba(0,0,0,0.07);
-}
-
-.container .aside {
-  position: sticky;
-  top: 0;
-  width: 300px;
-  border: 1px solid red;
-  min-height: 800px;
+  background-color: #059e7e;
 }
