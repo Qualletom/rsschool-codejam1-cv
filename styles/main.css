@@ -3,8 +3,12 @@
 }
 
 html, body {
-    /* height: 100vw; */
+    min-height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -142,6 +146,7 @@ p {
 
 .experience-article .experience-article-body .article-title {
     margin: 5px 0;
+    font-weight: normal;
 }
 
 .experience-article .experience-article-body .article-company,
@@ -192,8 +197,14 @@ p {
     font-weight: bold;
 }
 
-.header p {
-    margin: 0;
+.footer {
+    height: 40px;
+    background-color: #059e7e;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 40px;
 }
 
 .main {
