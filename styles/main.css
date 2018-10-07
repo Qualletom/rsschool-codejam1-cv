@@ -89,9 +89,34 @@ p {
   word-break: break-word;
 }
 
-.author-info .social .linkedin::before {
+.author-info .social .account-info {
+  position: relative;
+  margin-top: 10px;
+}
+
+.author-info .social .account-info::before {
   content: "";
-  background: url(../images/pattern.svg) 0 0;
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+}
+
+.author-info .social .linkedin::before {
+  background-image: url(../images/Linkedin.svg);
+}
+
+.author-info .social .facebook::before {
+  background-image: url(../images/Facebook.svg);
+}
+
+.author-info .social .twitter::before {
+  background-image: url(../images/Twitter.svg);
+}
+
+.author-info .social .github::before {
+  background-image: url(../images/Github.svg);
 }
 
 .author-summary {
