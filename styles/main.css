@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 40px;
+  background-color: #07af8b;
+}
+
+.main {
+  height: calc(100% - 40px);
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0 10px 17px 0 rgba(0,0,0,0.07);
+}
+
+.author-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  width: 100%;
+}
+
+.author-info .photo {
+  height: 160px;
+  min-width: 160px;
+  background-image: url("../images/photo.png");
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.author-info .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.author-info .details .name {
+  font-size: 30px;
+}
+
+.author-info .details .profession {
+  color: #059e7e;
+}
+
+.author-info .social {
+  display: flex;
+  align-items: center;
+}
+
+.author-info .social .list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  word-break: break-word;
+}
+
+.author-info .social .account-info {
+  position: relative;
+  margin-top: 10px;
+}
+
+.author-info .social .account-info::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+}
+
+.author-info .social .linkedin::before {
+  background-image: url(../images/Linkedin.svg);
+}
+
+.author-info .social .facebook::before {
+  background-image: url(../images/Facebook.svg);
+}
+
+.author-info .social .twitter::before {
+  background-image: url(../images/Twitter.svg);
+}
+
+.author-info .social .github::before {
+  background-image: url(../images/Github.svg);
+}
+
+.author-summary {
+  padding: 0 40px;
+  width: 100%;
+  text-align: justify;
+}
+
+.author-experience {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 30px 0;
+  width: 100%;
+  max-height: 1000px;
+}
+
+.author-experience .experience-article {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.experience-article .experience-article-body {
+  padding: 0 0 20px 30px;
+  position: relative;
+}
+
+.experience-article .left-bar::before,
+.experience-article .left-bar::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  border-radius: 50%;
+  background: #e5e5e3;
+}
+
+.experience-article .left-bar::before {
+  left: -5px;
+  width: 10px;
+  height: 10px;
+}
+
+.experience-article .left-bar::after {
+  left: -1px;
+  width: 1px;
+  height: 100%;
+}
+
+.experience-article .left-bar:last-child::after {
+  display: none;
+}
+
+.experience-article .experience-article-body .article-years,
+.experience-article .experience-article-body .article-description
+{
+  text-align: justify;
+  font-size: 14px;
+  color: #a7a7a7;
+}
+
+.experience-article .experience-article-body .article-title {
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+.experience-article .experience-article-body .article-company,
+.experience-article .experience-article-body .article-education-subject,
+.experience-article .experience-article-body .article-english-level {
+  padding-top: 5px;
+  color: #07af8b;
+}
+
+.experience-article-body .skills-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.experience-article-body .skills-list .skill {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.experience-article-body .skills-list .skill .loading-bar {
+  position: relative;
+  max-width: 200px;
+  width: 100%;
+  height: 20px;
+  margin: 0 10px;
+  border: 1px solid #07af8b;
+}
+
+.experience-article-body .skills-list .skill .loading-bar::before {
+  content: "";
+  position: absolute;
+  height: 19px;
+  background: #07af8b;
+}
+
+.experience-article-body .skills-list .skill:nth-child(2n) .loading-bar::before {
+  width: 35%;
+}
+
+.experience-article-body .skills-list .skill:nth-child(2n + 1) .loading-bar::before {
+  width: 70%;
+}
+
+.author-experience .experience-article-header {
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  margin-top: 40px;
+  background-color: #059e7e;
+}
